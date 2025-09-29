@@ -1,0 +1,116 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Kufi+Arabic:wght@400;600;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 40 33% 98%; /* warm off-white */
+    --foreground: 165 6% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 165 6% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 165 6% 15%;
+
+    --primary: 261 89% 60%; /* purple */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 204 20% 96%;
+    --secondary-foreground: 210 10% 20%;
+
+    --muted: 210 16% 94%;
+    --muted-foreground: 215 14% 40%;
+
+    --accent: 199 100% 50%; /* blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 40 12% 85%;
+    --input: 40 12% 85%;
+    --ring: 261 89% 60%;
+
+    --radius: 0.8rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 261 89% 60%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 199 100% 50%;
+
+    --sidebar-accent-foreground: 0 0% 100%;
+
+    --sidebar-border: 40 12% 85%;
+
+    --sidebar-ring: 152 59% 30%;
+  }
+
+  .dark {
+    --background: 230 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 230 10% 10%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 230 10% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 261 89% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 230 10% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 230 10% 16%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 199 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 40%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 230 10% 18%;
+    --input: 230 10% 18%;
+    --ring: 261 89% 60%;
+    --sidebar-background: 230 10% 10%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 261 89% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 199 100% 50%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 230 10% 18%;
+    --sidebar-ring: 261 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  /* RTL helpers */
+  [dir="rtl"] .rtl-right-3 { right: 0.75rem; left: auto; }
+
+  /* Riyal symbol rendering: ensure fonts that include U+FDFC */
+  .font-riyal {
+    font-family: "Noto Naskh Arabic", "Amiri", "Scheherazade New", "Arial Unicode MS", "Segoe UI Symbol", "Noto Kufi Arabic", "Inter", sans-serif;
+  }
+}
